@@ -1,0 +1,14 @@
+services:
+  mc:
+    container_name: minecraft-server
+    hostname: mc-server
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25665:25565"
+    environment:
+      EULA: "TRUE"
+      # VERSION: "X.X.X" # OPTIONNAL
+    volumes:
+      - ./data:/data
